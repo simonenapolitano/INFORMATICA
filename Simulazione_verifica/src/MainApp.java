@@ -60,8 +60,8 @@ public class MainApp {
                     break;
                 case 3:
                     if(contPanini>2 && contBibite>1){
-                    System.out.println("Scontrino: " + scontrino);
-                    System.out.println("Prezzo totale(con sconto del 10%): " + (prezzoTotale * 0.9) + " (senza sconto " + prezzoTotale + " euro)");
+                        System.out.println("Scontrino: " + scontrino);
+                        System.out.println("Prezzo totale(con sconto del 10%): " + (prezzoTotale * 0.9) + " (senza sconto " + prezzoTotale + " euro)");
                     } else{
                         System.out.println("Scontrino: " + scontrino);
                         System.out.println("Prezzo totale: " + prezzoTotale);

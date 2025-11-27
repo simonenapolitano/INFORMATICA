@@ -42,7 +42,11 @@ public class MainGUI extends JFrame {
                 contPanini +=1;
                 prezzoTot += panini[numero].getPrezzo();
                 paniniTotale.setText("Panini: " + String.valueOf(contPanini));
-                prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                if(contPanini>2 && contBibite>1){
+                    prezzoTotale.setText(String.format("Totale: %.2f €(senza sconto %.2f €)", (prezzoTot * 0.9), prezzoTot));
+                } else{
+                    prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                }
             });
             bottoniminus[i].addActionListener(e->{
                 if (Integer.parseInt(quantita[numero].getText()) > 0) {
@@ -50,7 +54,11 @@ public class MainGUI extends JFrame {
                     contPanini -=1;
                     prezzoTot -= panini[numero].getPrezzo();
                     paniniTotale.setText("Panini: " + String.valueOf(contPanini));
-                    prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                    if(contPanini>2 && contBibite>1){
+                        prezzoTotale.setText(String.format("Totale: %.2f €(senza sconto %.2f €)", (prezzoTot * 0.9), prezzoTot));
+                    } else{
+                        prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                    }
                 }
             });
             paniniBibite.add(quantita[i]);
@@ -69,7 +77,11 @@ public class MainGUI extends JFrame {
                 contBibite +=1;
                 prezzoTot += bibite[numero].getPrezzo();
                 bibiteTotale.setText("Bibite: " + String.valueOf(contBibite));
-                prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                if(contPanini>2 && contBibite>1){
+                    prezzoTotale.setText(String.format("Totale: %.2f €(senza sconto %.2f €)", (prezzoTot * 0.9), prezzoTot));
+                } else{
+                    prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                }
             });
             bottoniminus[i+panini.length].addActionListener(e->{
                 if (Integer.parseInt(quantita[numero+panini.length].getText()) > 0) {
@@ -77,7 +89,12 @@ public class MainGUI extends JFrame {
                     contBibite -=1;
                     prezzoTot -= bibite[numero].getPrezzo();
                     bibiteTotale.setText("Bibite: " + String.valueOf(contBibite));
-                    prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                    if(contPanini>2 && contBibite>1){
+                        prezzoTotale.setText(String.format("Totale: %.2f €(senza sconto %.2f €)", (prezzoTot * 0.9), prezzoTot));
+                    } else{
+                        prezzoTotale.setText(String.format("Totale: %.2f €", prezzoTot));
+                    }
+                    
                 } 
             });
             paniniBibite.add(quantita[i+panini.length]);
