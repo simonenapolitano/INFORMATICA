@@ -7,7 +7,7 @@ public class MainApp {
     double prezzoTotale;
     Scanner input = new Scanner(System.in);
     public MainApp(){
-        int paninoBibita, scelta, contPanini=0, contBibite=0, quantita, altro;
+        int paninoBibita, scelta, contPanini=0, contBibite=0, quantita;
         String scontrino = "";
         panini[0] = new Articolo("Panino", 2.00);
         panini[1] = new Articolo("Panino completo", 2.50);
