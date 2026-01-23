@@ -1,8 +1,8 @@
 public class Abbigliamento extends Negozio{
-    public Abbigliamento(String nome){
-        super(nome);
+    public Abbigliamento(String nome, Prodotto... p){
+        super(nome, p);
     }
-    public void applicaSaldi(int percentuale) throws ValoreScontoException{
+    public void applicaSaldi(double percentuale) throws ValoreScontoException{
         if(percentuale < 1 || percentuale > 100){
             throw new ValoreScontoException();
         }
@@ -13,6 +13,6 @@ public class Abbigliamento extends Negozio{
 
     @Override
     public void stampaDettagli(){
-        System.out.println("Dettagli stampati!");
+        //
     }
 }
