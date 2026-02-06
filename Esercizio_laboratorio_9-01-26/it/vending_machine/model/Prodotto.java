@@ -1,3 +1,4 @@
+package it.vending_machine.model;
 public class Prodotto{
     private String codiceProdotto;
     private String nomeProdotto;
