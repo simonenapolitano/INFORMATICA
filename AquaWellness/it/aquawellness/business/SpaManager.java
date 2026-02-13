@@ -6,7 +6,7 @@ public class SpaManager {
     public SpaManager(){
         try {
             prenotazioni.add(new IngressoTerme("Julia", "1", 5.00, true));
-            if(prenotazioni.size() + 1 < CAPIENZA_MAX){
+            if(prenotazioni.size() + 1 > CAPIENZA_MAX){
                 throw new LimiteOspitiRaggiuntiException();
             }
         } catch (LimiteOspitiRaggiuntiException e) {
