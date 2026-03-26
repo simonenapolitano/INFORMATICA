@@ -1,12 +1,11 @@
 package it.ospedale.model;
-import java.time.LocalDate;
 import java.time.Period;
 
 public class RicoveroOrdinario extends Paziente {
     private boolean pastoPersonalizzato;
 
-    public RicoveroOrdinario(String nome, String codiceCartellaClinica, Double tariffaBase, boolean pastoPersonalizzato){
-        super(nome, codiceCartellaClinica, tariffaBase);
+    public RicoveroOrdinario(String nome, String codiceCartellaClinica, boolean pastoPersonalizzato){
+        super(nome, codiceCartellaClinica);
         this.pastoPersonalizzato = pastoPersonalizzato;
     }
 

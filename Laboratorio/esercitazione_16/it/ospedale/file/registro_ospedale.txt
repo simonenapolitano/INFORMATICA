@@ -1,0 +1,3 @@
+Mario, 1, true, true
+Luca, 2, false, falsePaolo, 2, true, false
+Paolo, 3, true, true

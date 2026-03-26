@@ -8,10 +8,10 @@ public abstract class Paziente{
     private LocalDate dataArrivo;
     private LocalDate dataUscita;
 
-    public Paziente(String nome, String codiceCartellaClinica, Double tariffaBase){
+    public Paziente(String nome, String codiceCartellaClinica){
         this.nome = nome;
         this.codiceCartellaClinica = codiceCartellaClinica;
-        this.tariffaBase = tariffaBase;
+        this.tariffaBase = 100.0;
         this.dataArrivo = LocalDate.now();
         this.dataUscita = null;
     }
@@ -57,5 +57,10 @@ public abstract class Paziente{
     }
 
     public abstract Double calcolaCostoRicovero();
+
+    @Override
+    public String toString() {
+        return "Nome:\t" + nome + "\tCodice di cartella clinica:\t" + codiceCartellaClinica;
+    }
 
 }

@@ -2,8 +2,8 @@ package it.ospedale.model;
 import java.time.Period;
 
 public class RicoveroDayHospital extends Paziente {
-    public RicoveroDayHospital(String nome, String codiceCartellaClinica, Double tariffaBase){
-        super(nome, codiceCartellaClinica, tariffaBase);
+    public RicoveroDayHospital(String nome, String codiceCartellaClinica){
+        super(nome, codiceCartellaClinica);
     }
 
     @Override
