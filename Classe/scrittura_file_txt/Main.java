@@ -1,22 +1,17 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Main{
 
     public Main(){
-        scriviSuFile("files/file.txt");
+        scriviSuFile("files/LucaRavasi.txt", "ciao");
         String contenuto = leggiFile("files/file.txt");
         System.out.println("Contenuto del file: " + contenuto);
     }
 
-    private void scriviSuFile(String percorso){
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(percorso));) 
+    private void scriviSuFile(String percorso, String message){
+        try (BufferedWriter gay = new BufferedWriter(new FileWriter(percorso));) 
         {
-            bufferedWriter.write("Ciao");
-            System.out.println("Archiviazione completata");
+            gay.write(message);
         } catch (IOException e) {
             System.out.println("ERRORE: " + e.getMessage());
         }
@@ -24,20 +19,13 @@ public class Main{
 
     private String leggiFile(String percorso){
         try(BufferedReader reader = new BufferedReader(new FileReader(percorso))) {
-            String linea;
-            String contenuto = "";
-            while((linea = reader.readLine()) != null){
-                contenuto += linea;
-            }
-            return contenuto;
+            return reader.readAllAsString();
         } catch (IOException e) {
-            System.out.println("ERRORE: " + e.getMessage());
-            return "ERRORE";
+            return "ERRORE" + e.getMessage();
         }
     }
 
     public static void main(String[] args) {
-        new Main();
-        
+        new Main(); 
     }
 }
